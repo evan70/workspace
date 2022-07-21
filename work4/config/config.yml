@@ -1,0 +1,106 @@
+##
+# Basic
+#
+site_title: babuel.com     # The title of your website
+base_url: ~                         # Pico will try to guess its base URL, if this fails, override it here;
+                                    #     Example: https://example.com/pico/
+rewrite_url: true                   # A boolean (true or false) indicating whether URL rewriting is forced
+debug: true                         # Set this to true to enable Pico's debug mode
+timezone: ~                         # Your PHP installation might require you to manually specify a timezone
+locale: ~                           # Your PHP installation might require you to manually specify a locale to use
+
+##
+# Theme
+#
+theme: magazine                     # The name of your custom theme
+themes_url: ~                       # Pico will try to guess the URL to the themes dir of your installation;
+                                    # If this fails, override it here. Example: https://example.com/pico/themes/
+pages_order_by: date
+pages_order: desc
+numPerPage: 4                       # Number of posts on front page
+
+theme_config:                       # Additional theme-specific config
+    widescreen: false               # Default theme: Use more horizontal space (i.e. make the site container wider)
+twig_config:                        # Twig template engine config
+    autoescape: html                # Let Twig escape variables by default
+    strict_variables: false         # If set to true, Twig will bail out when unset variables are being used
+    charset: utf-8                  # The charset used by Twig templates
+    debug: ~                        # Enable Twig's debug mode
+    cache: false                    # Enable Twig template caching by specifying a path to a writable directory
+    auto_reload: ~                  # Recompile Twig templates whenever the source code changes
+
+##
+# Content
+#
+date_format: %D %T                  # Pico's default date format;
+                                    #     See https://php.net/manual/en/function.strftime.php for more info
+pages_order_by_meta: author         # Sort pages by meta value "author" (set "pages_order_by" to "meta")
+pages_order_by: date                # Change how Pico sorts pages ("alpha" for alphabetical order, "date", or "meta")
+pages_order: desc                   # Sort pages in ascending ("asc") or descending ("desc") order
+content_dir: ~                      # The path to Pico's content directory
+content_ext: .md                    # The file extension of your Markdown files
+content_config:                     # Parsedown Markdown parser config
+    extra: true                     # Use the Parsedown Extra parser to support extended markup;
+                                    #     See https://michelf.ca/projects/php-markdown/extra/ for more info
+    breaks: false                   # A boolean indicating whether breaks in the markup should be reflected in the
+                                    #     parsed contents of the page
+    escape: false                   # Escape HTML markup in your content files; don't confuse this with some sort of
+                                    #     safe mode, enabling this doesn't allow you to process untrusted user input!
+    auto_urls: true                 # Automatically link URLs found in your markup
+assets_dir: assets/                 # The path to Pico's assets directory
+assets_url: ~                       # Pico will try to guess the URL to the assets dir of your installation;
+                                    #     If this fails, override it here. Example: https://example.com/pico/assets/
+
+##
+# Plugins
+#
+plugins_url: ~                      # Pico will try to guess the URL to the plugins dir of your installation;
+                                    #     If this fails, override it here. Example: https://example.com/pico/plugins/
+DummyPlugin.enabled: true           # Force the plugin "DummyPlugin" to be disabled
+
+##
+# Custom
+#
+my_custom_setting: Hello World!     # You can access custom settings in themes using {{ config.my_custom_setting }}
+
+default_email: epithemic@yandex.com
+
+PicoContentEditor:
+    show: true          # show/hide the editor
+    debug: true         # enable errors reporting
+    language: cs        # supported language code
+    uploadpath: images  # upload directory (images/ by default)
+    # custom ContentTools library location (local files by default)
+    ContentToolsUrl: assets/ContentTools
+
+##
+# Pico Pagination Plugin
+pagination_limit: 4
+
+# PicoEditor Password
+# http://www.sha1-online.com/
+PicoEditor.password: 2c769596e09539a839d6ef742bef22be4e4ca11a433b81d03d89423f35ae180dddb61f0a018fbf13f90678046da63ac382deb0330fd32478d17d5343b2e19440
+
+
+# Pico Editor Configuration
+PicoEditor:
+    enabled: true                           # Force the plugin to be enabled or disabled
+    password: 2c769596e09539a839d6ef742bef22be4e4ca11a433b81d03d89423f35ae180dddb61f0a018fbf13f90678046da63ac382deb0330fd32478d17d5343b2e19440        # You have to use your own password (you should use hash, not raw password! https://sha512.online/)
+    url: editor                             # You can change editor url
+
+# PicoUsers
+# https://bcrypt.online/
+users:
+    evan: $2y$10$sfajIhcQl.l712N385Ocd.ltaSi.cKW30JqxIF7wlwL0d66dYe8um
+    editors:
+        marc: $2a$08$V/En.8vnZFWGOwXvDvFYsO8PTq.KSA5eYTehICnErFnd3V.zzsj.K
+        admins:
+            john: $2a$08$bCVTtxqH/VxWuHqrZQ/QiOEcvvbVjl9UD3mTf.7AnXhS90DXj5IZ6
+    family:
+        mum: $2a$08$qYtklDGOy/cCK1K0Zh8qROkFW3/V7gFgve.0GQv/sPmLYHm0jEiTi
+        dad: $2a$08$Eu7aKmOLz1Jme4iReWp6r.TfI2K3V3DyeRDV8oBS6gMtDPessqqru
+rights:
+    family-things: family
+    secret/infos: editors
+    secret/infos/: editors/admins
+    just-for-john: john
