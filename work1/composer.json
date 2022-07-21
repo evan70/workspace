@@ -1,0 +1,60 @@
+{
+    "name": "picocms/pico-composer",
+    "type": "project",
+    "description": "Pico is a flat file CMS, this means there is no administration backend and database to deal with. You simply create .md files in the \"content\" folder and that becomes a page.",
+    "keywords": [ "pico", "picocms", "pico-cms", "simple", "flat-file", "cms", "content-management", "website", "markdown-to-html", "php", "markdown", "yaml", "twig", "composer-project" ],
+    "homepage": "http://picocms.org/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Rudolf",
+            "email": "picocms.org@daniel-rudolf.de",
+            "role": "Lead Developer"
+        },
+        {
+            "name": "The Pico Community",
+            "homepage": "http://picocms.org/"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/picocms/pico-composer/graphs/contributors"
+        }
+    ],
+    "support": {
+        "docs": "http://picocms.org/docs",
+        "issues": "https://github.com/picocms/Pico/issues",
+        "source": "https://github.com/picocms/Pico"
+    },
+
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../components/pico",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "../components/pico-theme",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "../components/pico-deprecated",
+            "options": { "symlink": true }
+        }
+    ],
+    
+    "require": {
+        "picocms/pico": "dev-master",
+        "picocms/pico-theme": "dev-master",
+        "picocms/pico-deprecated": "dev-master",
+        "picocms/composer-installer": "^1.0"
+    },
+    "minimum-stability": "alpha",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "picocms/composer-installer": true
+        }
+    }
+}

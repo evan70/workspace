@@ -1,0 +1,49 @@
+{% include 'includes/htmlHead.twig' %}
+{% include 'includes/head.twig' %}
+<body>
+  {% include 'includes/nav.twig' %}
+  
+  {% include "includes/yaml_error.twig" %}
+  
+  {% include 'includes/hero.twig' %}
+
+  <main id="main">
+    <!-- ======= About Us Section ======= -->
+    {% include 'includes/main/about.twig' %}
+
+    <!-- ======= Why Us Section ======= -->
+    {% include 'includes/main/why-us.twig' %}
+
+    <!-- ======= Our Slide Products Section ======= -->
+    {% include 'includes/main/slide-prod.twig' %}
+
+    <!-- ======= Tab Navi Fade-in special menu Section = -->
+    {% include 'includes/main/tab-nav.twig' %}
+
+    {% include 'includes/main/auto-slide.twig' %}
+
+    <!-- ======= Book A Table Form Section ======= -->
+    {% include 'includes/main/reserv-form.twig' %}
+
+    <!-- ======= Testimonials Slide Section ======= -->
+    {% include 'includes/main/testimon-slide.twig' %}
+
+    <!-- ======= Gallery Swipe Section ======= -->
+    {% include 'includes/main/gallery-swipe.twig' %}
+
+    <!-- ======= Staff Section ======= -->
+    {% include 'includes/main/staff.twig' %}
+
+    <!-- ======= Contact Section ======= -->
+    {% include 'includes/main/contact.twig' %}
+
+  </main><!-- End #main -->
+
+  {% include 'includes/foot.twig' %}
+
+
+{{content}}
+</body>
+{% include 'includes/pages-list.twig' %}
+
+{% include 'includes/htmlFoot.twig' %}

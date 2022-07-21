@@ -1,0 +1,14 @@
+#!
+# Freelancer for Pico v2.0.7 (https://github.com/mayamcdougall/freelancer-pico)
+# Ported by Maya McDougall (https://github.com/mayamcdougall)
+# Based on upstream Freelancer v7.0.4 by Start Bootstrap (https://startbootstrap.com/theme/freelancer)
+# Licensed under MIT (https://github.com/mayamcdougall/freelancer-pico/blob/main/LICENSE)
+#
+
+api_version: 3                  # Use Pico's latest API version for themes
+
+twig_config:                    # Twig template engine config
+  autoescape: html            # Let Twig escape variables by default
+  strict_variables: false     # If set to true, Twig will bail out when unset variables are being used
+  charset: utf-8              # The charset used by Twig templates
+

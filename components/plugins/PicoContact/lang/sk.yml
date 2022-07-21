@@ -1,0 +1,128 @@
+---
+# Slovak language file for p01contact
+key: sk
+name: Slovenčina
+english_name: Slovak
+authors:  Pavol Bokor
+date: "2020-6-22"
+compatibility: 1.1
+strings:
+  # basic fields
+  text: text
+  textarea: textové pole
+  password: heslo
+  file: príloha
+  # html5 inputs types
+  color: farba
+  date: dátum
+  email: e-mail
+  month: mesiac
+  number: číslo
+  range: rozsah
+  search: hľadať
+  tel: telefónne číslo
+  time: čas
+  url: URL
+  week: týždeň
+  # other fields
+  name: meno
+  subject: predmet
+  message: správa
+  address: poštová adresa
+  askcopy: pošlite mi kópiu tohto e-mailu
+  captcha: captcha
+  # actions
+  send: Odoslať
+  reload: Obnoviť
+  reset: Vyčistiť formulár
+  # received email
+  askedcopy: Bola vyžiadaná kópia tohto e-mailu
+  anonymous: Anonym
+  nosubject: (Bez predmetu)
+  email_title: E-mail odoslaný z
+  # confirmations
+  sent: E-mail bol odoslaný.
+  sent_debug: E-mail bol virtuálne odoslaný (je zapnutý debug mode).
+  sent_copy: E-mail bol odoslaný. Kópia bola odoslaná na zadanú adresu.
+  sent_copy_error: E-mail bol odoslaný, ale nepodarilo sa odoslať kópiu na požadovanú adresu.
+  sent_already: Správa už bola odoslaná.
+  # errors
+  error: "Chyba : žiadna správa sa neodoslala."
+  error_notarget: Tento kontaktný formulár nemá žiadneho príjemcu.
+  error_honeypot: Blip. Blop. Blup. Boli ste identifikovaný ako robot.
+  error_pageload: Blip. Blop. Blup. Ste rýchlejší ako robot. Počkajte pár sekúnd, prosím.
+  error_lastpost: Odoslali ste e-mail pred chvíľou. Počkajte pár sekúnd, prosím.
+  error_postcount: Za poslednú hodinu ste odoslali viac e-mailov, ako je povolené.
+  # fields errors
+  field_required: Toto pole je povinné
+  field_email: Vložte platný e-mail, prosím
+  field_tel: Vložte platné telefónne číslo, prosím
+  field_url: Vložte platnú webovú adresu, prosím
+  field_message: Napíšte dlhšiu správu, prosím
+  field_captcha: Odpovedzte správne na nasledujúci kód captcha
+  field_password: Nesprávne heslo
+  field_blacklist: Toto pole obsahuje zakázané výrazy
+  field_whitelist: Očakávaná hodnota chýba
+  # configuration panel
+  config_title: p01contact - Nastavenia
+  config_updated: Vaše zmeny boli úspešne uložené.
+  config_error_open: <b>Nepodarilo sa otvoriť konfiguračný súbor.</b> Skontrolujte jeho existenciu a oprávnenia
+  config_error_modify: <b>Nemožno upraviť konfiguračný súbor.</b> Skontrolujte oprávnenia súboru"
+  # infos
+  new_release: K dispozícii je nová verzia!
+  download: Stiahnite si najnovšiu verziu
+  repo: Github
+  wiki: Dokumentácia / Wiki
+  issues: Pomoc / nahlásiť chybu
+
+  # settings
+
+  disable: Zakázať všetky formuláre
+  disable_sub: Zakáže odosielanie e-mailov bez skrytia kontaktných formulárov.
+
+  default_email: Predvolené e-maily
+  default_email_sub: Jedna alebo viac e-mailových adries oddelených čiarkami, ktoré budú prijímať e-maily z formulárov.
+
+  default_params: Predvolené parametre
+  default_params_sub: Predvolená štruktúra formulára. Použite syntax popísanú v dokumentácii.
+
+  lang: Jazyk
+  lang_sub: Predvolený jazyk je nastavený na
+
+  message_len: Minimálna dĺžka správy
+  message_len_sub: Minimálny počet znakov pre pole správy.
+
+  separator: Oddeľovač
+  separator_sub: "Oddeľovač parametrov v značkách formulárov. Napr .: čiarka, bodkočiarka, double-pipe ..."
+
+  logs_count: Počet záznamov denníka (Logs)
+  logs_count_sub: Maximálny počet záznamov v denníku.
+
+  checklists: Kontrolné zoznamy polí
+  blacklist: Blacklist
+  whitelist: Whitelist
+  checklists_sub: Blacklist je zoznam zakázaných hodnôt v danom type poľa a Whitelist je zoznam iba možných hodnôt pre daný typ poľa. Každý člen by mal byť oddelený čiarkami.
+  
+  Security: Bezpečnosť
+  
+  use_honeypot: Použiť skryté pole "honeypot"
+  use_honeypot_sub: Ku každému formuláru pridá skryté pole, ktoré sa nevypĺňa. Ľudia ho neuvidia, ale väčšina spamových robotov spadne do pasce.
+
+  min_sec_after_load: Minimálny čas po načítaní stránky
+  min_sec_after_load_sub: Minimálny počet sekúnd medzi načítaním stránky a odoslaním formulára. Bežný človek potrebuje na prečítanie, vyplnenie a odoslanie formulára najmenej niekoľko sekúnd. Roboti nie.
+  
+  min_sec_between_posts: Minimálny čas medzi dvoma odoslaniami správ
+  min_sec_between_posts_sub: Minimálny počet sekúnd medzi dvoma odoslaniami formulára tým istým používateľom.
+
+  max_posts_by_hour: Maximálny počet odoslaných e-mailov za hodinu
+  max_posts_by_hour_sub: Maximálny počet e-mailov odoslaných jedným používateľom za hodinu.
+
+  captcha_info: Natívne mechanizmy proti nevyžiadanej pošte a proti chybám by mali zabrániť všetkým nežiadúcim odoslaniam. Ak potrebujete vyššiu úroveň zabezpečenia, môžete vytvoriť vlastnú captcha pridaním poľa s požadovanou odpoveďou. Nakoniec môžete vložiť Google reCaptcha pomocou poľa <em> captcha </em> s nižšie uvedenými nastaveniami.
+  recaptcha_public_key: reCaptcha public key
+  recaptcha_public_key_sub: Google reCaptcha public key.
+  recaptcha_secret_key: reCaptcha secret key
+  recaptcha_secret_key_sub: Google reCaptcha secret key.
+  
+  debug: Debug mode (Režim ladenia)
+  debug_sub: Zakáže odosielanie e-mailov, zobrazí dátovú štruktúru p01-contact, dáta odoslané príkazom POST a e-mail, ktorý by sa odoslal.
+  debug_warn: Neaktivovať na produkčnej webovej stránke!

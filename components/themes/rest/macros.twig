@@ -1,0 +1,20 @@
+{% macro menu(items) %}
+  <ul>
+  {% for name,item in items %}
+    <li>
+      {% if item.url %}
+        <a href="{{ item.url }}">{{ item.title }}</a> : {{ item.description }}
+      {% else %}
+        <span>{{ name }}</span>
+      {% endif %}
+      {% if item._childs %}
+        {% import _self as macros %}
+        {{ macros.menu(item._childs) }}
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% import _self as macros %}
+{{ macros.menu(nested_pages) }}
